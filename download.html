@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download UangKu – Beta Testing</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0faf9;
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #00342B, #00796B);
+      color: white;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 6px; }
+    header p  { font-size: 0.95rem; opacity: 0.85; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    main {
+      max-width: 600px;
+      margin: 36px auto;
+      padding: 0 16px 60px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      color: #00695C;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #00796B;
+      color: white;
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    .download-btn:hover { background: #00695C; }
+    .download-btn:last-child { margin-bottom: 0; }
+    .btn-left { display: flex; align-items: center; gap: 12px; }
+    .btn-icon { font-size: 1.6rem; }
+    .btn-title { font-weight: 700; font-size: 0.97rem; }
+    .btn-sub   { font-size: 0.78rem; opacity: 0.85; margin-top: 2px; }
+    .btn-arrow { font-size: 1.2rem; opacity: 0.7; }
+    .steps { counter-reset: step; }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      min-width: 28px;
+      height: 28px;
+      background: #E0F2F1;
+      color: #00695C;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .note {
+      background: #FFF8E1;
+      border-left: 3px solid #FFC107;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      color: #5D4037;
+      margin-top: 16px;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.83rem;
+      padding: 20px;
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.5rem; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🪙 UangKu</h1>
+  <p>Unduh aplikasi untuk mencoba sebelum rilis resmi</p>
+  <div class="badge">Beta Testing — v1.0.0</div>
+</header>
+
+<main>
+
+  <!-- Download buttons -->
+  <div class="card">
+    <h2>📦 Download APK</h2>
+
+    <a class="download-btn" href="https://drive.google.com/open?id=1cznjIgpL0LINykuVK-5_xcu8ADvzR-2Y" target="_blank">
+      <div class="btn-left">
+        <span class="btn-icon">📱</span>
+        <div>
+          <div class="btn-title">UangKu v1.0.0 (arm64)</div>
+          <div class="btn-sub">HP Android 2017 ke atas · 29 MB · Recommended</div>
+        </div>
+      </div>
+      <span class="btn-arrow">↓</span>
+    </a>
+
+    <a class="download-btn" href="https://drive.google.com/open?id=1aTm8pg1i0TwrQlXff3dnJCgq0MSZXxHJ" target="_blank">
+      <div class="btn-left">
+        <span class="btn-icon">📱</span>
+        <div>
+          <div class="btn-title">UangKu v1.0.0 (arm32)</div>
+          <div class="btn-sub">HP Android lama · 25 MB</div>
+        </div>
+      </div>
+      <span class="btn-arrow">↓</span>
+    </a>
+
+    <div class="note">
+      ⚠️ Ini adalah versi beta untuk testing. Belum tersedia di Play Store.
+    </div>
+  </div>
+
+  <!-- Cara install -->
+  <div class="card">
+    <h2>⚙️ Cara Install</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>Download APK di atas (pilih <strong>arm64</strong> untuk HP modern)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>Buka <strong>Pengaturan → Keamanan → Install aplikasi tidak dikenal</strong> → aktifkan untuk browser kamu</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>Buka file APK yang sudah didownload → tap <strong>Install</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>Buka app <strong>UangKu</strong> → daftar akun baru</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="card">
+    <h2>📋 Fitur yang Tersedia</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">✓</div><div>Catat transaksi pemasukan & pengeluaran</div></div>
+      <div class="step"><div class="step-num">✓</div><div>Kelola beberapa dompet</div></div>
+      <div class="step"><div class="step-num">✓</div><div>Anggaran bulanan per kategori</div></div>
+      <div class="step"><div class="step-num">✓</div><div>Target tabungan & investasi</div></div>
+      <div class="step"><div class="step-num">✓</div><div>Pengingat tagihan otomatis</div></div>
+      <div class="step"><div class="step-num">✓</div><div>Analisis pengeluaran & grafik</div></div>
+      <div class="step"><div class="step-num">✓</div><div>Kunci PIN & biometrik</div></div>
+    </div>
+  </div>
+
+  <!-- Feedback -->
+  <div class="card">
+    <h2>💬 Feedback & Bug Report</h2>
+    <p style="font-size:0.93rem; line-height:1.6;">
+      Temukan bug atau ada saran? Hubungi developer langsung:<br/>
+      📧 <a href="mailto:egberttel@gmail.com" style="color:#00796B; font-weight:600;">egberttel@gmail.com</a>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 UangKu · <a href="index.html" style="color:#00796B;">Kebijakan Privasi</a>
+</footer>
+
+</body>
+</html>
